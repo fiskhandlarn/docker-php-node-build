@@ -5,6 +5,9 @@ MAINTAINER David Sferruzza <david.sferruzza@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 ENV COMPOSER_NO_INTERACTION 1
 
+# https://superuser.com/a/1423685
+RUN printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list
+
 # Add Node.js repo
 RUN apt-get update \
  && apt-get install --no-install-recommends -y \
