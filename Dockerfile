@@ -26,6 +26,9 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/man/?? /usr/share/man/??_*
 
+# Downgrade npm
+RUN npm install -g npm@5.6.0
+
 # Show versions
 RUN php -v
 RUN node -v
