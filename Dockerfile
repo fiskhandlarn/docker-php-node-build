@@ -20,7 +20,7 @@ RUN apt-get update \
  openssh-client \
  bzip2 \
  git \
- php5-cli \
+ php7-cli \
  nodejs \
  # Slim down image
  && apt-get clean \
